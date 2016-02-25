@@ -24,7 +24,7 @@ app.get('/countries', function(req, res){
 	res.send('TEST')
 })
 
-
+app.post('/api/country', controller.getCountry)
 
 
 
