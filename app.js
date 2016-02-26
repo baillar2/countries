@@ -20,13 +20,16 @@ app.get('/', function(req, res){
 	res.sendFile('/index.html', {root: './public'})
 })
 
+app.get('/api/load', controller.loadCountries)
+
+
 app.get('/countries', function(req, res){
 	res.send('TEST')
 })
 
 app.post('/api/country', controller.getCountry)
 
-
+app.post('/api/addCountry', controller.newCountry)
 
 
 

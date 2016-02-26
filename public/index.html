@@ -8,13 +8,15 @@
 </head>
 <body ng-controller="controllerOne">
 
-	<button ng-click="loadCountries()">Load Countries</button>
+	<button ng-click="getCountries()">Load Countries</button>
 	<form ng-submit="findCountry()">
 		<input ng-model="search.country" type="text" placeholder="name of country">
 		<input type="submit" value="submit">
 	</form>
 	<div>
-		<span ng-repeat="place in array">{{returnCountry.name}}</span>
+		<ul>
+			<li ng-repeat="place in array">{{place.name}}</li>
+		</ul>
 	</div>
 
 </body>
